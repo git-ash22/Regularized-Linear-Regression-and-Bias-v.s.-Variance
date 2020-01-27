@@ -12,36 +12,35 @@ fmincg.m - Function minimization routine (similar to fminunc)
 plotFit.m - Plot a polynomial fit
 trainLinearReg.m - Trains linear regression using your cost function
 
-[*] linearRegCostFunction.m - Regularized linear regression cost function
-[*] learningCurve.m - Generates a learning curve
-[*] polyFeatures.m - Maps data into polynomial feature space
-[*] validationCurve.m - Generates a cross validation curve
-
-* indicates files you will need to complete
+[1] linearRegCostFunction.m - Regularized linear regression cost function
+[2] learningCurve.m - Generates a learning curve
+[3] polyFeatures.m - Maps data into polynomial feature space
+[4] validationCurve.m - Generates a cross validation curve
 
 Throughout the exercise, you will be using the script ex5.m. These scripts
 set up the dataset for the problems and make calls to functions that you will
 write. You are only required to modify functions in other files, by following
 the instructions in this assignment.
 
-## 1 Regularized Linear Regression
+## 1. Regularized Linear Regression
 In the first half of the exercise, you will implement regularized linear regression to predict the amount of water flowing out of a dam using the change of water level in a reservoir. In the next half, you will go through some diagnostics of debugging learning algorithms and examine the effects of bias v.s. variance. The provided script, ex5.m, will help you step through this exercise.
 
-## 2 Bias-variance
+## 2. Bias-variance
 An important concept in machine learning is the bias-variance tradeoff. Models with high bias are not complex enough for the data and tend to underfit, while models with high variance overfit to the training data.
 
-## 3 Polynomial regression
+## 3. Polynomial regression
 The problem with our linear model was that it was too simple for the data
 and resulted in underfitting (high bias). In this part of the exercise, you will
 address this problem by adding more features.
 For use polynomial regression, our hypothesis has the form:
+
 hθ(x) = θ0 + θ1 ∗ (waterLevel) + θ2 ∗ (waterLevel)2 + · · · + θp ∗ (waterLevel)p
 = θ0 + θ1x1 + θ2x2 + ... + θpxp.
+
 Notice that by defining x1 = (waterLevel), x2 = (waterLevel)2
-, . . . , xp =
-(waterLevel)p
-, we obtain a linear regression model where the features are the
+, . . . , xp = (waterLevel)p, we obtain a linear regression model where the features are the
 various powers of the original value (waterLevel).
+
 Now, you will add more features using the higher powers of the existing
 feature x in the dataset. Your task in this part is to complete the code in
 polyFeatures.m so that the function maps the original training set X of size
