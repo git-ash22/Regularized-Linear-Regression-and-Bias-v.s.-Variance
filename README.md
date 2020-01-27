@@ -13,8 +13,11 @@ plotFit.m - Plot a polynomial fit
 trainLinearReg.m - Trains linear regression using your cost function
 
 [1] linearRegCostFunction.m - Regularized linear regression cost function
+
 [2] learningCurve.m - Generates a learning curve
+
 [3] polyFeatures.m - Maps data into polynomial feature space
+
 [4] validationCurve.m - Generates a cross validation curve
 
 Throughout the exercise, you will be using the script ex5.m. These scripts
